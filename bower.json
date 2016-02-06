@@ -1,12 +1,11 @@
 {
   "name": "extended-prototypes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "authors": [
     "Vandeuren Glenn <vandeurenglenn@gmail.com>"
   ],
-  "description": "some extra prototypes for lazy developers",
+  "description": "Some extra prototype functions for lazy developers",
   "main": "extended-prototypes.html",
-  "moduleType": [],
   "license": "MIT",
   "homepage": "https://github.com/vandeurenglenn/extended-prototypes",
   "ignore": [
@@ -14,6 +13,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "package.json",
+    "gulpfile.js"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.7.20",
+    "polymer": "^1.2.4"
+  }
 }

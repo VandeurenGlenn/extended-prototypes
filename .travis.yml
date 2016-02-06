@@ -1,0 +1,23 @@
+language: node_js
+sudo: false
+addons:
+  firefox: latest
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+node_js:
+- '4.2'
+- '5.1'
+before_script:
+- export DISPLAY=:99.0
+- npm i -g bower@1.7.1
+- bower i
+script:
+- xvfb-run wct
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -s 'default'; fi
+env:
+  global:
+  - secure: cVJ+z5ZaU54ex8xT/K5L+8evUjmG/f/B5ozNez+cD/psol+M1WwSjZSNgWisU2k6pogYvq9L67R2Rd7wnoQ2Le19GMIeGvNrEQpTZXJ61CWXTh+D4gPVBK886iU4jvYD6y24rE6kyA6jKb9+wLb3yFmnkDXteSp0bPAwjm/fwk0+7JteNaIQmbVVkogm9sYhfgM6R2l3swQYhhJZbJHOtAVKCMlX5AA2j+gNxLM7yAIIQjVVL4rhIoFpRkqFE0/NYsAqqOe6JTLemUVqQ/neBxn5hsX7MHvayhRInvSUBYlG5myR3iXorIe+/UzUGaRw8Qe2ituHqAn2fQMofZH7ZPmxc+zfaHs2dVJY9lXtOKBAK12i9zMVlu7cqGUwYLVJsiKxcX5oM872yziSODfS482wjvFKC47aR56mLeh6VyQ3y+60eJb31VkL1V2jW6tjLXEpL3OVbcVzOkaZ4V+dds2TYfm6ZJy081OoP2TTmsXzeZpd/BXpIKDIiTAr5JjUn58NPj70Ij6YnOpBdy7+0OimYA4WXF1ZOiPASLsy2AHA+jvl/3WfRuIdqAWRiW6kXv0Nw4ylS3XwVTrRIZhkKCxcU3e0jE3er1oQZ9qoKKYKk4LhB/YM6AWrxp/oarGVL+/hsYeGlZDQdUmgCZ17lXCe6br8H7IOv2fhAI8TcU8=
+  - secure: sGo0CMTo4bEvP9kdgWCl1icEeCXDmCz8zFf+8cgGboJoJjaCXJmViOaz3JFPgyp/MpBOCkv0oqHUgfkfBviAlIRAazti9urr3VOsjoINOPe1qn0xbbtZPc5vor0nPO02ktoqOIcpEzeMS/95kyQwYpLmt7yeK/gOw3xgjnUJ0YW8jaStIoCHYkVdGRu2x4mvvxLHlyFwtv4onJdcMCCw3/ROUpC8RArg5jP9/TgCrORaJNXDoZpjLC26ObZQckAjeEydfR39G5tgbdt8wEH+4YCPBmrIvffJz/rGHK/YPlezTUHDvXpxmfFbEzpSNVWnOVIXGqz4+kkhDOdDtPc9wukmVtpjAznthtyEHkh/Icso7G9DQQwihrQ7+JBiNO+9lKdcZS+UW9UawtmckpOt0u3OJrsfnMbzJ/6K4kSy4MgA010IvXHqyVLooH84eFURtbIvFf+sa5tpqN02NH7vo3moIekbF2H00YqbVRWE2BouMUvGoO/d+sRooHiboqXbbJ77rYH7RBG7wfQTj4n3JpCXVQzIOT3GJIYgjHBCXIOmMPRNIOmk+1GF9RjwE8ERdF2kx3rAfY7AT9vgWc9L1AWcOolfEovmUzEWjcQURimgVkCMJ7epBvbyy+OZzZ2wwEjlJV4fUe3ysaTexpoXbnSCjCRLOFR7bTg1j/8VV74=

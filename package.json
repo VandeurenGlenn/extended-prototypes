@@ -1,0 +1,26 @@
+{
+  "name": "extended-prototypes",
+  "version": "0.1.0",
+  "description": "Some extra prototype functions for lazy developers",
+  "main": "extended-prototypes.html",
+  "scripts": {
+    "test": "gulp test:local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VandeurenGlenn/extended-prototypes.git"
+  },
+  "keywords": [
+    "prototypes"
+  ],
+  "author": "Glenn Vandeuren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VandeurenGlenn/extended-prototypes/issues"
+  },
+  "homepage": "https://github.com/VandeurenGlenn/extended-prototypes#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "web-component-tester": "^4.2.0"
+  }
+}
