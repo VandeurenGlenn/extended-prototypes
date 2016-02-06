@@ -17,3 +17,7 @@ String.prototype.removeWhitespace = function() {
   // Do a global search for whitespace characters
   return this.replaceWhitespace('');
 };
+// TODO: check by css, json , etc ...?
+String.prototype.beautify = function() {
+  return this.replaceWhitespace(' ').replace(/\{/gi, '{').replace(/\}/gi, '}\n');
+};
