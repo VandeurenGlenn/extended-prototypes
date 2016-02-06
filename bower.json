@@ -1,0 +1,19 @@
+{
+  "name": "extended-prototypes",
+  "version": "0.0.1",
+  "authors": [
+    "Vandeuren Glenn <vandeurenglenn@gmail.com>"
+  ],
+  "description": "some extra prototypes for lazy developers",
+  "main": "extended-prototypes.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/vandeurenglenn/extended-prototypes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
