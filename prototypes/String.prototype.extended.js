@@ -13,3 +13,7 @@ String.prototype.replaceWhitespace = function(by) {
   // Do a global search for whitespace characters
   return this.replace(/\s+/g, by);
 };
+String.prototype.removeWhitespace = function() {
+  // Do a global search for whitespace characters
+  return this.replaceWhitespace('');
+};
