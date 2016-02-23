@@ -74,6 +74,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           str = '{some: value} {some: value}';
           expect(str.beautify()).to.be.equal('{some: value}\n {some: value}\n');
         });
+
+        it('tests toHttps()', function() {
+          str = 'http://google.be';
+          expect(str.toHttps()).to.be.equal('https://google.be');
+        });
       });
     </script>
 

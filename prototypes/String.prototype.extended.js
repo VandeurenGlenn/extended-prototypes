@@ -21,3 +21,16 @@ String.prototype.removeWhitespace = function() {
 String.prototype.beautify = function() {
   return this.replaceWhitespace(' ').replace(/\{/gi, '{').replace(/\}/gi, '}\n');
 };
+String.prototype.to = function (a, b) {
+  var target = this.valueOf();
+  if (target.includes(a) && !target.includes(b)) {
+    return target.replace(a, b);
+  } else if (!target.includes(a) && !target.includes(b)) {
+    var url = b + '://';
+    return url.concat(target);
+  }
+  return target;
+};
+String.prototype.toHttps = function () {
+  return this.to('http', 'https');
+};
